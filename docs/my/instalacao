@@ -1,0 +1,150 @@
+__________________
+12/02/2021 - 19:47 
+
+  INSTALAÇÃO
+
+  
+manoel@worknote:~/Desktop/estudos/angular_cli/angular-cli$ yarn
+yarn install v1.22.10
+$ node ./tools/yarn/check-yarn.js
+[1/5] Validating package.json...
+error @angular/devkit-repo@12.0.0-next.0: The engine "node" is incompatible with this module. Expected version ">=12.13.0 <15.0.0". Got "10.19.0"
+error Found incompatible module.
+info Visit https://yarnpkg.com/en/docs/cli/install for documentation about this command.
+manoel@worknote:~/Desktop/estudos/angular_cli/angular-cli$ nvm use
+Found '/home/manoel/Desktop/estudos/angular_cli/angular-cli/.nvmrc' with version <10.13>
+N/A: version "10.13 -> N/A" is not yet installed.
+
+You need to run "nvm install 10.13" to install it before using it.
+manoel@worknote:~/Desktop/estudos/angular_cli/angular-cli$ nvm install 12.13.0
+Downloading and installing node v12.13.0...
+Downloading https://nodejs.org/dist/v12.13.0/node-v12.13.0-linux-x64.tar.xz...
+######################################################################### 100,0%
+Computing checksum with sha256sum
+Checksums matched!
+Now using node v12.13.0 (npm v6.12.0)
+Creating default alias: default -> 12.13.0 (-> v12.13.0)
+manoel@worknote:~/Desktop/estudos/angular_cli/angular-cli$ nvm use default
+Now using node v12.13.0 (npm v6.12.0)
+manoel@worknote:~/Desktop/estudos/angular_cli/angular-cli$ node
+Welcome to Node.js v12.13.0.
+Type ".help" for more information.
+> .exit
+manoel@worknote:~/Desktop/estudos/angular_cli/angular-cli$ yarn
+yarn install v1.22.10
+$ node ./tools/yarn/check-yarn.js
+[1/5] Validating package.json...
+[2/5] Resolving packages...
+[3/5] Fetching packages...
+info fsevents@2.3.2: The platform "linux" is incompatible with this module.
+info "fsevents@2.3.2" is an optional dependency and failed compatibility check. Excluding it from installation.
+info @bazel/buildifier-darwin_x64@0.29.0: The platform "linux" is incompatible with this module.
+info "@bazel/buildifier-darwin_x64@0.29.0" is an optional dependency and failed compatibility check. Excluding it from installation.
+info @bazel/buildifier-win32_x64@0.29.0: The platform "linux" is incompatible with this module.
+info "@bazel/buildifier-win32_x64@0.29.0" is an optional dependency and failed compatibility check. Excluding it from installation.
+info fsevents@1.2.13: The platform "linux" is incompatible with this module.
+info "fsevents@1.2.13" is an optional dependency and failed compatibility check. Excluding it from installation.
+[4/5] Linking dependencies...
+warning " > @bazel/typescript@3.1.0" has incorrect peer dependency "typescript@>=3.0.0 <4.0".
+warning " > codelyzer@6.0.1" has incorrect peer dependency "@angular/compiler@>=2.3.1 <12.0.0 || ^11.0.0-next || ^11.1.0-next || ^11.2.0-next".
+warning " > codelyzer@6.0.1" has incorrect peer dependency "@angular/core@>=2.3.1 <12.0.0 || ^11.0.0-next || ^11.1.0-next || ^11.2.0-next".
+warning " > ng-packagr@12.0.0-next.0" has incorrect peer dependency "@angular/compiler@^11.0.0".
+warning " > ng-packagr@12.0.0-next.0" has incorrect peer dependency "@angular/compiler-cli@^11.0.0".
+warning " > ts-api-guardian@0.6.0" has incorrect peer dependency "typescript@~3.9.2".
+warning " > tslint-sonarts@1.9.0" has incorrect peer dependency "tslint@^5.11.0".
+warning " > tslint-sonarts@1.9.0" has incorrect peer dependency "typescript@^2.2 || ^3.0".
+[5/5] Building fresh packages...
+$ yarn webdriver-update && yarn ngcc && yarn husky install
+yarn run v1.22.10
+$ webdriver-manager update --standalone false --gecko false --versions.chrome 89.0.4389.0
+[20:45:40] I/file_manager - creating folder /home/manoel/Desktop/estudos/angular_cli/angular-cli/node_modules/webdriver-manager/selenium
+[20:45:40] I/config_source - curl -o/home/manoel/Desktop/estudos/angular_cli/angular-cli/node_modules/webdriver-manager/selenium/chrome-response.xml https://chromedriver.storage.googleapis.com/
+[20:45:41] I/downloader - curl -o/home/manoel/Desktop/estudos/angular_cli/angular-cli/node_modules/webdriver-manager/selenium/chromedriver_89.0.4389.0.zip https://chromedriver.storage.googleapis.com/89.0.4389.23/chromedriver_linux64.zip
+[20:45:42] I/update - chromedriver: unzipping chromedriver_89.0.4389.0.zip
+[20:45:42] I/update - chromedriver: setting permissions to 0755 for /home/manoel/Desktop/estudos/angular_cli/angular-cli/node_modules/webdriver-manager/selenium/chromedriver_89.0.4389.0
+Done in 2.85s.
+yarn run v1.22.10
+$ ngcc --properties es2015 browser module main --first-only --create-ivy-entry-points
+Compiling @angular/core : es2015 as esm2015
+Compiling @angular/animations : es2015 as esm2015
+Compiling @angular/cdk/keycodes : es2015 as esm2015
+Compiling @angular/compiler/testing : es2015 as esm2015
+Compiling @angular/service-worker/config : es2015 as esm2015
+Compiling @angular/animations/browser : es2015 as esm2015
+Compiling @angular/cdk/observers : es2015 as esm2015
+Compiling @angular/common : es2015 as esm2015
+Compiling @angular/cdk/collections : es2015 as esm2015
+Compiling @angular/core/testing : es2015 as esm2015
+Compiling @angular/cdk/accordion : es2015 as esm2015
+Compiling @angular/cdk/platform : es2015 as esm2015
+Compiling @angular/cdk/bidi : es2015 as esm2015
+Compiling @angular/platform-browser : es2015 as esm2015
+Compiling @angular/cdk/a11y : es2015 as esm2015
+Compiling @angular/forms : es2015 as esm2015
+Compiling @angular/cdk/scrolling : es2015 as esm2015
+Compiling @angular/platform-browser/animations : es2015 as esm2015
+Compiling @angular/cdk/portal : es2015 as esm2015
+Compiling @angular/common/http : es2015 as esm2015
+Compiling @angular/cdk/layout : es2015 as esm2015
+Compiling @angular/cdk/overlay : es2015 as esm2015
+Compiling @angular/material/core : es2015 as esm2015
+Compiling @angular/platform-browser-dynamic : es2015 as esm2015
+Compiling @angular/cdk/text-field : es2015 as esm2015
+Compiling @angular/platform-browser/testing : es2015 as esm2015
+Compiling @angular/cdk/stepper : es2015 as esm2015
+Compiling @angular/cdk/table : es2015 as esm2015
+Compiling @angular/material/form-field : es2015 as esm2015
+Compiling @angular/material/button : es2015 as esm2015
+Compiling @angular/material/icon : es2015 as esm2015
+Compiling @angular/material/tooltip : es2015 as esm2015
+Compiling @angular/material/dialog : es2015 as esm2015
+Compiling @angular/material/select : es2015 as esm2015
+Compiling @angular/material/input : es2015 as esm2015
+Compiling @angular/material/divider : es2015 as esm2015
+Compiling @angular/material/sort : es2015 as esm2015
+Compiling @angular/cdk/tree : es2015 as esm2015
+Compiling @angular/platform-browser-dynamic/testing : es2015 as esm2015
+Compiling @angular/material/paginator : es2015 as esm2015
+Compiling @angular/platform-server : es2015 as esm2015
+Compiling @angular/common/testing : es2015 as esm2015
+Compiling @angular/router : es2015 as esm2015
+Compiling @angular/animations/browser/testing : es2015 as esm2015
+Compiling @angular/cdk/clipboard : es2015 as esm2015
+Compiling @angular/cdk/drag-drop : es2015 as esm2015
+Compiling @angular/common/http/testing : es2015 as esm2015
+Compiling @angular/material/autocomplete : es2015 as esm2015
+Compiling @angular/material/badge : es2015 as esm2015
+Compiling @angular/material/bottom-sheet : es2015 as esm2015
+Compiling @angular/material/button-toggle : es2015 as esm2015
+Compiling @angular/material/card : es2015 as esm2015
+Compiling @angular/material/checkbox : es2015 as esm2015
+Compiling @angular/material/chips : es2015 as esm2015
+Compiling @angular/material/datepicker : es2015 as esm2015
+Compiling @angular/material/expansion : es2015 as esm2015
+Compiling @angular/material/grid-list : es2015 as esm2015
+Compiling @angular/material/icon/testing : es2015 as esm2015
+Compiling @angular/material/list : es2015 as esm2015
+Compiling @angular/material/menu : es2015 as esm2015
+Compiling @angular/material/progress-bar : es2015 as esm2015
+Compiling @angular/material/progress-spinner : es2015 as esm2015
+Compiling @angular/material/radio : es2015 as esm2015
+Compiling @angular/material/sidenav : es2015 as esm2015
+Compiling @angular/material/slide-toggle : es2015 as esm2015
+Compiling @angular/material/slider : es2015 as esm2015
+Compiling @angular/material/snack-bar : es2015 as esm2015
+Compiling @angular/material/stepper : es2015 as esm2015
+Compiling @angular/material/table : es2015 as esm2015
+Compiling @angular/material/tabs : es2015 as esm2015
+Compiling @angular/material/toolbar : es2015 as esm2015
+Compiling @angular/material/tree : es2015 as esm2015
+Compiling @angular/platform-server/testing : es2015 as esm2015
+Compiling @angular/router/testing : es2015 as esm2015
+Compiling @angular/service-worker : es2015 as esm2015
+Done in 22.50s.
+yarn run v1.22.10
+$ /home/manoel/Desktop/estudos/angular_cli/angular-cli/node_modules/.bin/husky install
+husky - Git hooks installed
+Done in 0.38s.
+Done in 276.68s.
+manoel@worknote:~/Desktop/estudos/angular_cli/angular-cli$ 
+
